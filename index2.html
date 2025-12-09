@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Random Index</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore My Random Index Page</h1>
+</header>
+
+<section>
+    <h2>Check Out My Image Gallery!</h2>
+    <div class="gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png" alt="Random Image 1">
+        <img src="https://resizing.flixster.com/oZOpwImPeG1OaFQaH3EA1rYpQbM=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p14652182_b_h9_aa.jpg" alt="Random Image 2">
+        <img src="https://m.media-amazon.com/images/M/MV5BMTNhMDJmNmYtNDQ5OS00ODdlLWE0ZDAtZTgyYTIwNDY3OTU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Random Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjrXNvxWPup2iikTU0pkjLL0eWITxacVLDEg&s" alt="Random Image 4">
+    </div>
+    <button onclick="generateRandomFact()">Generate Random Fact</button>
+    <p id="randomFact" style="font-size: 1.3em; margin-top: 20px;"></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Random Index Page. All rights reserved.</p>
+</footer>
+
+<script>
+    const facts = [
+        "The Eiffel Tower can be 15 cm taller during the summer due to expansion of the metal.",
+        "Honey never spoils. Archaeologists have found pots of honey in ancient tombs that are over 3,000 years old.",
+        "Bananas are berries, but strawberries aren't.",
+        "There are more stars in the universe than grains of sand on all the Earth’s beaches.",
+        "Octopuses have three hearts and blue blood."
+    ];
+
+    function generateRandomFact() {
+        const randomFact = facts[Math.floor(Math.random() * facts.length)];
+        document.getElementById("randomFact").innerText = randomFact;
+    }
+</script>
+
+</body>
+</html>
